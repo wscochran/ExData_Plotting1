@@ -37,8 +37,8 @@ plot(DF$DateTime, DF$Sub_metering_1, type = 'n', ps = 12, xlab = '', ylab = 'Ene
 lines(DF$DateTime, DF$Sub_metering_1)
 lines(DF$DateTime, DF$Sub_metering_2, col = 'red')
 lines(DF$DateTime, DF$Sub_metering_3, col = 'blue')
-legend("topright", lwd = 1, col = c("black", "blue", "red"), bty = "o", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
-#legend(1170437940, 40, lwd = 1, col = c("black", "blue", "red"), bty = "o", legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"))
-#legend("topright", lwd = 0, legend = c("              ", "              ", "              "))
+# Ok, I gave up on the positioning of the legend. But, this works...
+legend("topright", lwd = 1, col = c("black", "blue", "red"), bty = "o", legend = c("Sub_metering_1            ", "Sub_metering_2", "Sub_metering_3"))
+#legend(1170437940, 40, lwd = 1, col = c("black", "blue", "red"), bty = "o", legend = c("Sub_metering_1      ", "Sub_metering_2      ", "Sub_metering_3      "))
 
 dev.copy(png, file = "plot3.png", height = 480, width = 480) ; dev.off()
