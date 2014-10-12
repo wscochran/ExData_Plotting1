@@ -32,7 +32,9 @@ DF <- DF[complete.cases(DF), ]
 par(bg="transparent")
 par(mfrow = c(1,1))
 par(ps = 12)
-par(family = "Hershey")
+par(family = "sans")
 hist(DF$Global_active_power, col='red', xlab = 'Global Active Power (kilowatts)', 
-     main = 'Global Active Power')
+     main = '')
+mtext("Global Active Power", cex = 1.2, side = 3, family='Hershey', font=2)
+
 dev.copy(png, file = "plot1.png", height = 480, width = 480) ; dev.off()
